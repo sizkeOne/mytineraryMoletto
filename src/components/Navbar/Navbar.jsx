@@ -36,7 +36,7 @@ function Navbar2() {
               <Offcanvas.Body>
                 
                 <div className='urls'>
-                 
+                  <Link to="/">Home</Link>
 
                   <Link to="/cities">Cities</Link>
                   
