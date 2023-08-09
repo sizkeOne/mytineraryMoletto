@@ -1,0 +1,20 @@
+.containerCities{
+    min-height  : 88vh;
+ 
+    background-image: url("../../../public/Construction.jpg");
+  background-size: cover;
+  background-repeat: repeat-x;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.citiesPage{
+ background-color: whitesmoke;
+ padding: 10px;
+ border-radius: 25px;
+ border-style: groove;
+ gap: 10px;
+}

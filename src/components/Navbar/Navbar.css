@@ -1,0 +1,49 @@
+
+nav{
+    display: flex;
+    flex-direction: row;
+
+    color: black;
+}
+
+#navbarStyle{
+    display: flex;
+}
+
+.imageNav img{
+    height: 5vh;
+width: 6vh; 
+}
+#containerfluid{
+    gap: 4vh;
+}
+
+.urls {
+    display: flex;
+    flex-direction: row;
+justify-content: flex-end; 
+
+   gap: 10px;
+}
+
+@media (max-width: 575px){
+
+    .urls {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+       gap: 10px;
+    }
+
+    .offcanvas-body {
+        display: flex;
+    justify-content: start;
+    }
+}
+
+.offcanvas-body {
+    display: flex;
+    
+justify-content: flex-end; 
+}

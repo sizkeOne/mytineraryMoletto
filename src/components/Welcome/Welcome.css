@@ -1,0 +1,85 @@
+.appHeader, .appFooter{
+    background-color: rgb(17, 0, 255);
+  }
+  
+  .appMain{
+    min-height: auto;
+    Font-family:  Georgia, serif;
+  }
+  .cardMain{
+    padding: 15px;
+    display: flex;
+    align-items: start;
+  flex-direction: column;
+  width: auto;
+  height: 50vh;
+    background-image: url("../public/fotoChubut.jpg");
+    justify-content: center;
+    background-size: cover;
+  gap: 3vh;
+  }
+  .cardMain > h3 {
+    background-color: rgba(255, 255, 255, 0.662);
+  padding: 10px;
+  border-radius: 3vh;
+  color: rgb(0, 0, 0);
+  }
+
+  .cardMain > p {
+    background-color: rgba(255, 255, 255, 0.662);
+  padding: 10px;
+  border-radius: 3vh;
+  color: rgb(0, 0, 0);
+  }
+  .buttomMain {
+    display: flex;
+    min-width: 30vh;
+    min-height: 1vh;
+    border-radius: 25vh;
+    background-color: rgb(230, 43, 105);
+    color: rgb(247, 247, 247);
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .buttomMain img {
+
+    width: 10vh;
+    height: 10vh;
+  }
+  .buttomMain:hover{
+    background-color: rgb(219, 100, 248);
+  } 
+  
+  .navBarStyle{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin: 10px;
+    justify-content: space-between;
+    
+  border-radius: 12vh;
+  }
+  
+  .buttonsNav {
+    display: flex;
+    gap: 25px;
+    flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: rgb(71, 58, 41) ;
+  
+  }
+  
+  .btnNav{
+    width: 100px ;
+  border-radius: 12vh;
+  padding: 10px;
+  
+  }
+  
+  .btnNav2{
+    width: 100px ;
+  border-radius: 12vh;
+  padding: 10px;
+  background-color: rgb(245, 139, 229);
+  }
