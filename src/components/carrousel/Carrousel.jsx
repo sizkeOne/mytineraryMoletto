@@ -14,7 +14,7 @@ const images = [
   ],
   [{"url": "./public/City5.jpg", "name":"Mendoza" },
   {"url": "./public/City13.jpg", "name":"Londres" },
-  {"url": "./public/City7.jpg", "name":"Bariloche" },
+  {"url": "./public/City7.jpg", "name":"Rio Negro" },
   {"url": "./public/City8.jpg", "name":"Misiones" }
     ],
     [{"url": "./public/City9.jpg", "name":"Ushuaia" },

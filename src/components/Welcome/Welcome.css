@@ -32,6 +32,7 @@
   color: rgb(0, 0, 0);
   }
   .buttomMain {
+    text-decoration: none;
     display: flex;
     min-width: 30vh;
     min-height: 1vh;

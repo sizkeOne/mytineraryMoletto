@@ -9,7 +9,9 @@ const SlideCarrousel = ({ imageUrls }) => {
                     {imageUrls.map((imageUrl, index) => (
             <div className="conteinerPic">
         <img key={index} src={imageUrl.url} alt={`Image ${index}`} />
+        <div className='textCard'>
         <h3>{imageUrl.name} </h3>
+        </div>
         </div>
 ))}
                 </div>

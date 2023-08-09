@@ -16,7 +16,7 @@ const Welcome = () => {
         <div className="cardMain">
           <h3>My Tinerary</h3>
           <p>
-            Find your perfect trip, designed byinsiders who know and love their
+            Find your perfect trip, designed by insiders who know and love their
             cities
           </p>
           <div className="buttom">

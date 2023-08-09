@@ -6,7 +6,7 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 
 import './Navbar.css'
 import { Link } from 'react-router-dom';
-import Cities from '../../pages/cities/cities';
+
 
 function Navbar2() {
 
@@ -37,7 +37,6 @@ function Navbar2() {
                 
                 <div className='urls'>
                   <Link to="/">Home</Link>
-
                   <Link to="/cities">Cities</Link>
                   
                 </div>

@@ -7,7 +7,9 @@ display: flex;
 
 background-image: url("public/City6.jpg");
 background-size: cover;
-Font-family: Goudy Old Style, Garamond, Big Caslon, Times New Roman, serif;
+Font-family: Helvetica Neue, Helvetica, Arial, sans-serif.
+
+
 }
 
 /* .CarrouselPics img{
@@ -42,7 +44,7 @@ Font-family: Goudy Old Style, Garamond, Big Caslon, Times New Roman, serif;
  
     background-repeat: no-repeat;
     background-size: cover;
- Font-family: Copperplate, Copperplate Gothic Light;
+    Font-family: Copperplate, Copperplate Gothic Light;
 }
 
 .conteinerImages img{
