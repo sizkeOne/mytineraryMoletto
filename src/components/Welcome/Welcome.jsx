@@ -1,6 +1,7 @@
 
 
-import Navbar from "react-bootstrap/Navbar";
+ 
+import { Link } from "react-router-dom";
 import "./welcome.css";
 const Welcome = () => {
   return (
@@ -19,10 +20,10 @@ const Welcome = () => {
             cities
           </p>
           <div className="buttom">
-            <button className="buttomMain">
+            <Link className="buttomMain" to="/cities">
               <img src="public/CityLogo.png" alt="" />
               
-              <h3>View travels</h3></button>
+              <h3>View travels</h3></Link>
           </div>
         </div>
       </main>
