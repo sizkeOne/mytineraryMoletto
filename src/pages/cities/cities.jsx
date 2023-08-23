@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import "./cities.css"
 import { useParams } from 'react-router-dom'
-import axios from 'axios'
+
 import HomeCities from '../../components/HomeCities/HomeCities'
 
 const Cities = () =>{
