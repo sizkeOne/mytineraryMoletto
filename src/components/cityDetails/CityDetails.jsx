@@ -16,7 +16,8 @@ const CityDetails = ({ data }) => {
         <Card.Title>Text</Card.Title>
         <Card.Text>In {name} the main language is {language}</Card.Text>
         <Card.Title>The total population are {population}</Card.Title>
-         </Card.Body>
+        <Link to="/cities/" className="btn">Back</Link> 
+    </Card.Body>
     </Card>
     </div>
   );

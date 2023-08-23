@@ -17,7 +17,7 @@ const Details = () =>{
       <div className='containerCities'>
    <div className='cardsCities'>
   {cities?.map(city  =>
-    <CityDetails data={city} />
+    < CityDetails data={city} />
   )}
   </div>
       
