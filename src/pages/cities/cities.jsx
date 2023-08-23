@@ -1,15 +1,33 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import "./cities.css"
+import { useParams } from 'react-router-dom'
+import axios from 'axios'
+import HomeCities from '../../components/HomeCities/HomeCities'
 
-function Cities() {
-  return (
+const Cities = () =>{
+  // const params = useParams()
+  // console.log(params)
+  const [cities, setCities]= useState([])
+  useEffect(() =>{
+    axios('http://localhost:3000/api/cities')
+.then(res => setCities(res.data.response))
+
+  },  [])
+ console.log(cities);
+  return (  
     <div className='containerCities'>
-      <div className='citiesPage'>
-        <h2>COOMING SOON</h2>
-        <h3>WEBSITE IN CONSTRUCTION</h3> 
-      </div>
+ <div className='cardsCities'>
+{cities?.map(city  =>
+  <HomeCities data={city} />
+)}
+</div>
+    
+ 
     </div>
   )
 }
+
+  
+
 
 export default Cities

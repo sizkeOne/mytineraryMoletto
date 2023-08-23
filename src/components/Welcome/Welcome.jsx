@@ -1,6 +1,4 @@
 
-
- 
 import { Link } from "react-router-dom";
 import "./welcome.css";
 const Welcome = () => {

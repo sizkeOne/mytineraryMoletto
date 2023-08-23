@@ -18,3 +18,8 @@
  border-style: groove;
  gap: 10px;
 }
+.cardsCities {
+  display: flex;
+  gap: 10px;
+  margin: 05  px;
+}

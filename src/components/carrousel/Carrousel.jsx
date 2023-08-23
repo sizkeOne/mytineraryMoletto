@@ -30,26 +30,14 @@ const Carrousel = () => {
       <div className="textoCarrousel">
         <h1>POPULAR MY TINERARYS</h1>
         </div>
+
     <Carousel>
-      <Carousel.Item>
-   
-           <SlideCarrousel imageUrls={images[0]}/>
-            
-      </Carousel.Item>
-
-      <Carousel.Item>
-   
-   <SlideCarrousel imageUrls={images[1]}/>
-    
-</Carousel.Item>
-<Carousel.Item>
-   
-   <SlideCarrousel imageUrls={images[2]}/>
-    
-</Carousel.Item>
-
-
-    </Carousel>
+  {images.map((imageUrl, index) => (
+    <Carousel.Item key={index}>
+      <SlideCarrousel imageUrls={imageUrl} />
+    </Carousel.Item>
+  ))}
+</Carousel>
     </div>
   );
 }

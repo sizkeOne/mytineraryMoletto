@@ -7,6 +7,7 @@ import Cities from './pages/cities/cities';
 
 import { RouterProvider,createBrowserRouter } from 'react-router-dom';
 import MainLayout from './components/Layout/Layout';
+import Details from './pages/Details/Details';
 
 
 
@@ -22,6 +23,7 @@ children: [
 
  },
  { path:'/cities', element: <Cities/>
+},{ path:'/citiesDetails', element: <Details/>
 }
  ]
    } 
