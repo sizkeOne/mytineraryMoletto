@@ -20,7 +20,7 @@ try {
     console.log(err);
 }
     
-    return cities;
+    return cities.data.response;
     
 })
 

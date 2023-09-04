@@ -13,7 +13,7 @@ export const citiesReducer = createReducer(initialState, (builder) =>{
         .addCase(getAllCities.fulfilled, (state, action) => {
             return {
                 ...state,
-                cities: action.payload.cities
+                cities: action.payload 
 
             }
         }
@@ -22,7 +22,7 @@ export const citiesReducer = createReducer(initialState, (builder) =>{
         .addCase(citiesFilter.fulfilled, (state, action) => {
             return {
                 ...state,
-                cities: action.payload.cities
+                cities: action.payload 
             }
         })
 

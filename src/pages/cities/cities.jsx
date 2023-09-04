@@ -5,6 +5,7 @@ import { Link, useParams } from 'react-router-dom'
 import axios from 'axios'
 import HomeCities from '../../components/HomeCities/HomeCities'
 import { useDispatch, useSelector } from 'react-redux'
+import { getAllCities } from '../../store/actions/citiesActions'
 
 
 
@@ -18,9 +19,15 @@ const Cities = () => {
 
   // }, [])
   // console.log(cities);
+  const {cities} = useSelector( (store) => store.cities)  
+const dispatch = useDispatch()
 
+  useEffect(() => {
+        
+    dispatch(getAllCities())
+        }, [])
 
-
+        console.log(cities);
   const [searchText, setSearchText] = useState('');
   const formattedText = searchText.toLowerCase();
   const handleInputChange = event => {
