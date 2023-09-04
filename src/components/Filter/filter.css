@@ -70,8 +70,13 @@
 }
 
 .conteinerCards{
+   
   display: flex;
-  min-height: 80vh;
+    min-height: 80vh;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 10px;
+    flex-direction: column;
 }
 
 @media(max-width: 530px)

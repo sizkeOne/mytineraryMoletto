@@ -10,7 +10,7 @@ const FilterByName = () => {
 
   const [cities, setCities] = useState([])
   useEffect(() => {
-    axios(`http://localhost:3000/api/cities/search/${name}`)
+      axios(`http://localhost:3000/api/cities/search/${name}`)
       .then(res => setCities(res.data.response))
 
   }, [])
@@ -42,7 +42,10 @@ const FilterByName = () => {
         {cities?.map(city =>
           < HomeCities data={city} key=".id"/>
           )}
+          
       </div>
+      <button className="buttom"><Link to="/cities/" className="btn">Back</Link> </button>
+      
 
 </div>
     </div>
