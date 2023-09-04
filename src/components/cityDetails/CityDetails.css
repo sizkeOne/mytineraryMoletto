@@ -3,3 +3,83 @@
     min-width: 100vh;
     min-height: 100vh;
 }
+
+.textCity{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.buttom{
+    width: 75px;
+    height: 35px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.detailsContainer{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.cardDetails{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+    width: 600px;
+    height: 400px;
+}
+
+.cardDetails > img{
+    width: 300px;
+    height: 400px;
+}
+
+@media(max-width: 690px)
+ {
+    .cardDetails{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+  
+
+height: 500px;
+width: 500px;
+
+    }
+    .cardDetails > img{
+        width: 500px;
+        height: 200px;
+    }
+}
+
+@media(max-width: 530px)
+ {
+    .cardDetails{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+  
+
+height: 550px;
+width: 400px;
+
+    }
+    .cardDetails > img{
+        width: 400px;
+        height: 200px;
+    }
+    
+ 
+}

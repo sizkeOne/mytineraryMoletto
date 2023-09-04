@@ -34,9 +34,11 @@
   .buttomMain {
     text-decoration: none;
     display: flex;
+    flex-direction: row;
     min-width: 30vh;
     min-height: 1vh;
-    border-radius: 25vh;
+    border-radius: 60px;
+    padding: 5px;
     background-color: rgb(230, 43, 105);
     color: rgb(247, 247, 247);
     align-items: center;
@@ -46,6 +48,7 @@
 
     width: 10vh;
     height: 10vh;
+    margin: 15px  ;
   }
   .buttomMain:hover{
     background-color: rgb(219, 100, 248);

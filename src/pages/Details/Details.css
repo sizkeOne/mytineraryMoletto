@@ -1,4 +1,15 @@
 *{
     background-image: url("https://static.vecteezy.com/system/resources/previews/000/192/096/original/vector-website-under-construction.png");
     background-size: contain;
+
 }
+
+
+@media(max-width: 600px)
+ {
+    .containerCities{
+    max-width: 100px;
+    }
+
+ }
+

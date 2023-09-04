@@ -1,29 +1,53 @@
-
+ *{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+     text-decoration: none;
+ }
 nav{
     display: flex;
     flex-direction: row;
-
+ text-decoration: none;
     color: black;
 }
 
+.navbar{
+    --bs-navbar-padding-y: 0rem;
+    --bs-navbar-padding-x: 0rem;
+    
+}
 #navbarStyle{
     display: flex;
+   
 }
-
+.buttonNav{
+    border-radius: 25px;
+    width: 100px;
+    height: 40px;
+    color: #212529;
+    text-decoration: none;
+}
 .imageNav img{
     height: 5vh;
 width: 6vh; 
-}
+ }
 #containerfluid{
+    padding: 15px;
+    margin: 0px;
+
     gap: 4vh;
+    
+    background-color: rgba(97, 143, 143, 0.733);
 }
 
 .urls {
     display: flex;
     flex-direction: row;
 justify-content: flex-end; 
-
+text-decoration: none;
+color: aliceblue;
    gap: 10px;
+
 }
 
 @media (max-width: 575px){
@@ -32,7 +56,7 @@ justify-content: flex-end;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-
+        text-decoration: none;
        gap: 10px;
     }
 
@@ -44,6 +68,6 @@ justify-content: flex-end;
 
 .offcanvas-body {
     display: flex;
-    
+     text-decoration: none;
 justify-content: flex-end; 
 }

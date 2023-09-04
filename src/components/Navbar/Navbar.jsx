@@ -1,6 +1,6 @@
 
 import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
+ 
 import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 
@@ -14,13 +14,13 @@ function Navbar2() {
     <>
       {['sm'].map((expand) => (
   <div className="navbarStyle">
-        <Navbar key={expand} expand={expand} className="bg-body-tertiary mb-1">
+        <Navbar key={expand} expand={expand} className="navbarStyle">
           <Container fluid id='containerfluid'>
           
             <div className='imageNav'>     
           <img src="public/tinerary.png" alt="logo" id='navImg' />
           </div>
-            <Navbar.Brand href="#" > My Tinerary</Navbar.Brand>
+            <Link to="/" className='urls' > <h2>My Tinerary </h2></Link>
             
               <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
             <Navbar.Offcanvas
@@ -36,8 +36,8 @@ function Navbar2() {
               <Offcanvas.Body>
                 
                 <div className='urls'>
-                  <Link to="/">Home</Link>
-                  <Link to="/cities">Cities</Link>
+                  <button className='buttonNav'><Link to="/"className='buttonNav' >Home</Link></button>
+                  <button className='buttonNav'>  <Link to="/cities" className='buttonNav'>Cities</Link></button>
                   
                 </div>
       

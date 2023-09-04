@@ -1,0 +1,6 @@
+.container  {
+    background-image: url("./../../../../public/coomingSoon.jpg");
+    background-color: aqua;
+    width: 600px;   
+    height: 300px;
+}

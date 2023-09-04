@@ -4,8 +4,7 @@ import "./welcome.css";
 const Welcome = () => {
   return (
     
-   
-   
+
 
 
 
@@ -17,13 +16,13 @@ const Welcome = () => {
             Find your perfect trip, designed by insiders who know and love their
             cities
           </p>
-          <div className="buttom">
-            <Link className="buttomMain" to="/cities">
+         
+           <button className="buttomMain"> <Link className="buttomMain" to="/cities">
               <img src="public/CityLogo.png" alt="" />
-              
-              <h3>View travels</h3></Link>
-          </div>
-        </div>
+              <h3>View Cities</h3></Link>
+              </button>
+             
+              </div>
       </main>
     
   );
