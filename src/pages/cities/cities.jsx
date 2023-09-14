@@ -5,25 +5,19 @@ import { Link, useParams } from 'react-router-dom'
 import axios from 'axios'
 import HomeCities from '../../components/HomeCities/HomeCities'
 import { useDispatch, useSelector } from 'react-redux'
-import { getAllCities } from '../../store/actions/citiesActions'
+import { getAllCities } from '../../redux/actions/citiesActions'
 
 
 
 
 const Cities = () => {
 
-  // const [cities, setCities] = useState([])
-  // useEffect(() => {
-  //   axios('http://localhost:3000/api/cities')
-  //     .then(res => setCities(res.data.response))
 
-  // }, [])
-  // console.log(cities);
   const {cities} = useSelector( (store) => store.cities)  
 const dispatch = useDispatch()
 
   useEffect(() => {
-        
+    document.title = "Cities"
     dispatch(getAllCities())
         }, [])
 
@@ -50,7 +44,7 @@ const dispatch = useDispatch()
 
       <div className='cardsCities'>
         {cities?.map(city =>
-          <HomeCities data={city} />
+          <HomeCities key={city.id} data={city} />
         )}
       </div>
 

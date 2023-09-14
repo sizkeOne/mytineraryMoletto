@@ -1,0 +1,12 @@
+.containerButton{
+    width: 350px;
+    height: 400px;
+    padding: 10px;
+    display: flex;
+}
+
+.containerGoogle{
+    display: flex;
+    padding: 10px;
+    
+}

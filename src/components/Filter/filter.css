@@ -83,7 +83,7 @@
  {
 .searchBar{
   margin: 10px;
-  width: 400px;
+  width: 200px;
   gap: 20px;
   display: flex;
   background-color: rgba(251, 251, 251, 0.431)  ;
@@ -98,7 +98,7 @@
  {
 .searchBar{
   margin: 10px;
-  width: 300px;
+  width: 100px;
   gap: 20px;
   display: flex;
   background-color: rgba(251, 251, 251, 0.431)  ;
@@ -115,7 +115,7 @@
  {
 .searchBar{
   margin: 10px;
-  width: 500px;
+  width: 450px;
   gap: 20px;
   display: flex;
   background-color: rgba(251, 251, 251, 0.431)  ;

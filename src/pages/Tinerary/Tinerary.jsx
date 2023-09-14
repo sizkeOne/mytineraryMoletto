@@ -24,7 +24,7 @@ const Tinerary = () =>{
     
  <div className='cardsCities'>
 {tineraries?.map(tinerary  =>
-  <DetailsTinerary data={tinerary} />
+  <DetailsTinerary key={tinerary.id}  data={tinerary} />
 )}
 </div>
     

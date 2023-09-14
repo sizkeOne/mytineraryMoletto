@@ -1,0 +1,68 @@
+.containerSignUp{
+
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(30, 50, 67);
+    border-radius: 25px;
+    padding: 20px;
+    margin: 20px;
+    min-width: auto;
+    min-height: 79.6vh;
+    justify-content: center;
+     align-items: center;
+    align-items: center;
+}
+
+.formSignUp{
+    width: 600px;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+    box-shadow: 4px 0px 2px 3px black;
+    align-items: center;
+}
+
+.checked{
+    display: flex;
+    flex-direction: row;
+    align-content: stretch;
+    gap: 10px;
+    padding: 10px;
+    align-items: center;
+    flex-wrap: nowrap;
+ 
+}
+.buttonForm{
+
+    width: 150px;
+    height: 45px;
+    border-radius: 20px;
+}
+
+.buttonForm:hover{
+    background-color: thistle;
+    color: rgb(250, 217, 0);
+    box-shadow: 2px 0px 1px 1px black;
+}
+form {
+    
+ 
+    width: 464px;
+    height: 356px;
+ 
+}
+
+.buttonSubmit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkedButton{
+    padding: 10px;
+    width: 20%;
+}

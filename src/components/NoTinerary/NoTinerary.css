@@ -1,0 +1,26 @@
+.containerNoT{
+    display: flex;
+    flex-direction: row;
+    width: 400px;
+    height: 150px;
+    border-radius: 25px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(235, 234, 232, 0.744);
+gap:10px;
+box-shadow: 5px 1px 6px 4px black;
+margin:25px;
+}
+ img {
+    height: 10vh;
+    width: 7vh;
+}
+.cardMessage{
+    color: whitesmoke;
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(0, 0, 0);
+    margin: 10px;
+    padding: 15px;
+    border-radius: 30px;
+}

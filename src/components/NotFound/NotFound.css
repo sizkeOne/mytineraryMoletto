@@ -1,0 +1,18 @@
+.containerNotFound{
+
+    display: flex;
+    width: 250px;
+    height: 150px;
+    justify-content: center;
+    border-radius: 25px;
+    box-shadow: 10px 0px 2px 3px black;
+    background-color: rgba(211, 146, 146, 0.702);
+}
+
+.messageNotFound{
+    display: flex;
+   align-items: center;
+   justify-items: center;
+
+
+}

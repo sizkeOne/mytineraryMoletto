@@ -2,20 +2,24 @@
 display: flex;
 min-width: 0vh;
 
+
 }
 .contentTinerary{
     display: flex;
     flex-direction: row;
     gap: 100px;
+    align-content: stretch;
 
 }
 .containerTinerary{
     width: 650px;
-    height: 400px;
-    background-color: rgb(255, 194, 113);
+    height: 350px;
+    background-color: rgba(244, 143, 12, 0.84);
     padding: 20px;
     margin: 20px;
     border-radius: 30px;
+    box-shadow: 2px 0px 2px 2px rgb(11, 9, 9);
+        align-content: stretch;
 }
 
 .userName{ 
@@ -55,13 +59,14 @@ min-width: 0vh;
     flex-wrap: wrap;
     justify-content: center;
     align-content: stretch;
-    align-items: flex-end;
+    align-items: center
+    
 }
  .textCity {
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
-    align-items: flex-start;
+    align-items: center;
     align-content: stretch;
     flex-direction: column;
 }
@@ -75,7 +80,7 @@ min-width: 0vh;
         align-items: center;
         justify-items: center; 
         flex-wrap: wrap;
-        height: 300px;
+        height: 340px;
         width: 300px;
 
     }
@@ -91,12 +96,13 @@ min-width: 0vh;
         flex-wrap: wrap;
         justify-content: center;
         align-content: stretch;
-        align-items: flex-end;
+        align-items: center;
+        
     }
     
     .containerTinerary {
         width: 330px;
-        height: 410px;
+        height: 420px;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -110,7 +116,7 @@ min-width: 0vh;
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
-    align-items: flex-start;
+    align-items: center;
     align-content: stretch;
     flex-direction: column;
 }

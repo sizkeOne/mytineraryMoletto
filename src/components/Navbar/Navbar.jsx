@@ -18,7 +18,7 @@ function Navbar2() {
           <Container fluid id='containerfluid'>
           
             <div className='imageNav'>     
-          <img src="public/tinerary.png" alt="logo" id='navImg' />
+          <img src="public/pngtree-silhouette-of-an-airplane-against-the-background-of-the-globe-picture-image_7986634.png" alt="logo" id='navImg' />
           </div>
             <Link to="/" className='urls' > <h2>My Tinerary </h2></Link>
             
@@ -38,6 +38,10 @@ function Navbar2() {
                 <div className='urls'>
                   <button className='buttonNav'><Link to="/"className='buttonNav' >Home</Link></button>
                   <button className='buttonNav'>  <Link to="/cities" className='buttonNav'>Cities</Link></button>
+                  
+                  <button className='buttonNav'>  <Link to="/signUp" className='buttonNav'>Sign Up</Link></button>
+
+                  <button className='buttonNav'>  <Link to="/cities" className='buttonNav'>Sign In</Link></button>
                   
                 </div>
       

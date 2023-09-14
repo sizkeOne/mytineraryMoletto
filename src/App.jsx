@@ -9,6 +9,7 @@ import { RouterProvider,createBrowserRouter } from 'react-router-dom';
 import MainLayout from './components/Layout/Layout';
 import Details from  './pages/Details/Details/';
 import FilterByName from './components/Filter/filter';
+import Register from './pages/SignUp/SIngUp';
 
 
 
@@ -29,6 +30,8 @@ children: [
 },{ path:`/citiesDetails/:id`, element: <Details/>
 },
 { path:`/cities/search/:name`, element: <FilterByName/>
+},
+{ path:'/signUp', element: <Register/>
 }
  ]
    } 

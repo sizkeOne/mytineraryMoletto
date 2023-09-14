@@ -14,7 +14,7 @@ const CityDetails = ({ data }) => {
       <div >
       <Card className="cardDetails">
         <Card.Img variant="top" src={photo}  />
-        <Card.Body className="textCity">
+        <Card.Body className="textCityCard">
           <Card.Title>Name City: {name}</Card.Title>
 
         

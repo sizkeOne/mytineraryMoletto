@@ -2,6 +2,16 @@
 
     min-width: 100vh;
     min-height: 100vh;
+   
+}
+.textCityCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+ 
+    align-items: center;
+    Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
 }
 
 .textCity{
@@ -10,6 +20,8 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
+
+    Font-family: Optima, Segoe, Segoe UI, Candara, Calibri, Arial, sans-serif;
 }
 
 .buttom{
@@ -37,6 +49,7 @@
     justify-items: center;
     width: 600px;
     height: 400px;
+    
 }
 
 .cardDetails > img{
