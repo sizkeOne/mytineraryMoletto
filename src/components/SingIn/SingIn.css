@@ -1,4 +1,4 @@
-.containerSignUp{
+.containerSignIn{
 
     display: flex;
     flex-direction: column;
@@ -12,10 +12,13 @@
      align-items: center;
     align-items: center;
 }
-
-.formSignUp{
+.checked > input {
+    width: 10%;
+    height: 10%;
+}
+.formSignIn{
     width: 600px;
-    height: 600px;
+    height: 500px;
     display: flex;
     flex-direction: column;
     margin: 10px;
@@ -34,6 +37,7 @@
     padding: 10px;
     align-items: center;
     flex-wrap: nowrap;
+    align-items: baseline;
  
 }
 .buttonForm{
@@ -52,7 +56,7 @@ form {
     
  
     width: 464px;
-    height: 356px;
+    height: 320px;
  
 }
 
@@ -60,8 +64,7 @@ form {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px;
-    margin:10px
+     
 }
 
 .checkedButton{

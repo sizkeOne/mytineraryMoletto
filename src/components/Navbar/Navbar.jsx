@@ -41,7 +41,7 @@ function Navbar2() {
                   
                   <button className='buttonNav'>  <Link to="/signUp" className='buttonNav'>Sign Up</Link></button>
 
-                  <button className='buttonNav'>  <Link to="/cities" className='buttonNav'>Sign In</Link></button>
+                  <button className='buttonNav'>  <Link to="/signIn" className='buttonNav'>Sign In</Link></button>
                   
                 </div>
       

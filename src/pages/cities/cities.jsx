@@ -30,6 +30,8 @@ const dispatch = useDispatch()
   return (
 
     <div className='containerCities'>
+
+
       <div className="searchBar">
         <h3>Search...</h3>
         <input className='searchTable'

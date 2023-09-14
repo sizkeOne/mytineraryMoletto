@@ -10,3 +10,18 @@
     padding: 10px;
     
 }
+
+.button-with-image{
+    display: flex;
+    flex-direction: column;
+  width: 160px;
+  height: 50px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-with-image > img {
+width: 30px;
+height: 50px;
+}

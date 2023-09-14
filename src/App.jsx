@@ -10,6 +10,7 @@ import MainLayout from './components/Layout/Layout';
 import Details from  './pages/Details/Details/';
 import FilterByName from './components/Filter/filter';
 import Register from './pages/SignUp/SIngUp';
+import Login from './pages/SingIn/SingIn';
 
 
 
@@ -32,11 +33,17 @@ children: [
 { path:`/cities/search/:name`, element: <FilterByName/>
 },
 { path:'/signUp', element: <Register/>
+},
+{ path:'/signIn', element: <Login/>
 }
+
+
  ]
    } 
 ])
 export default function App() {
+
+  
  return (
  <RouterProvider router={router}/>
 
