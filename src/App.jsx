@@ -11,6 +11,10 @@ import Details from  './pages/Details/Details/';
 import FilterByName from './components/Filter/filter';
 import Register from './pages/SignUp/SIngUp';
 import Login from './pages/SingIn/SingIn';
+import { useGoogleOneTapLogin } from '@react-oauth/google';
+import jwtDecode from 'jwt-decode';
+import { server } from './utils/axios';
+import { useEffect, useState } from 'react';
 
 
 
@@ -43,7 +47,28 @@ children: [
 ])
 export default function App() {
 
-  
+  const [count, setCount ]= useState(0)
+
+
+
+  useGoogleOneTapLogin({
+  onSuccess: async credentialResponse => {
+    console.log(credentialResponse);
+    const infoUser = jwtDecode(credentialResponse.credential)
+    const userData= {
+      email: infoUser.email,
+      password: "aA_123"
+    } 
+    const res = await server.post('/auth/in', userData)
+    console.log(res);
+  },
+  onError: () =>{
+    console.log('Login Failed');
+  },
+});
+
+
+
  return (
  <RouterProvider router={router}/>
 

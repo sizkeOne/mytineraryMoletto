@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useRef, useState} from 'react'
 import './SingIn.css'
 import { server } from '../../utils/axios'
 import { GoogleLogin, GoogleOAuthProvider } from '@react-oauth/google'
@@ -10,28 +10,11 @@ import { Link } from 'react-router-dom'
 
 
 const  SignIn = () => {
-
-const [data, setData] = useState({
-  name:" ",
-  email:" ",
-  password:"",
-  terms: false
-})
-
-const handleChangeData = (event)=>{
-setData((prevState)=> {
-  return event.target.name === 'terms' ? {...prevState, [event.target.name]: event.target.checked} : {...prevState, [event.target.name]: event.target.value}  
-})
-}
-
-const handleSumbitData = async (event)=>{
-  event.preventDefault()
-  const userData = {...data}
-  delete userData.terms
-  const res = await server.post('/auth',userData)
-console.log(res);
-}
-
+    
+    const inputEmail = useRef();
+    
+    const inputPass = useRef();
+    
 const handleSumbitGoogle = async (data)=>{
   const userData = {...data}
   delete userData.terms
@@ -39,7 +22,17 @@ const handleSumbitGoogle = async (data)=>{
 console.log(res);
 }
 
+const handleSumbit = async (e)=>{
+    e.preventDefault()
+    const userData = {
+        email : inputEmail.current.value,
+        password : inputPass.current.value,
+    }
 
+    const res = await server.post('/auth/in',userData)
+  console.log(res);
+  }
+  
   return (
     <div className='containerSignIn'>
       
@@ -55,20 +48,16 @@ console.log(res);
         </div>
         <h4>or</h4>
         <div className='formSign'>
-            <form onSubmit={handleSumbitData}>
+            <form onSubmit={(e)=>{e.preventDefault()}}>
              
    <p>Email:</p>
   
-<input name='email' onChange={handleChangeData} value={data.email}  aria-label='Email' placeholder='Email' type="email"/>
+<input ref={inputEmail} name='email'   aria-label='Email' placeholder='Email' type="email"/>
 <p>Password:</p>
-<input name='password' onChange={handleChangeData}  value={data.password} type="password" aria-label='Password' placeholder='Password' />  
-<div className='checked'>
-<p>I AGREE TERMS AND CONDITIONS </p>
+<input ref={inputPass}  name='password'  type="password" aria-label='Password' placeholder='Password' />  
 
-<input className='checkedButton' name='terms' onChange={handleChangeData} value={data.terms}  type="checkbox" aria-label='Terms' placeholder='Terms'/> 
-</div>
 <div className='buttonSubmit'>
-<button type="submit" className='buttonForm'> SING IN</button>
+<button onClick={handleSumbit} className='buttonForm'> SING IN</button>
 </div>
 
             </form>

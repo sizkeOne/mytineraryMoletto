@@ -26,7 +26,7 @@ const handleSumbitData = async (event)=>{
   event.preventDefault()
   const userData = {...data}
   delete userData.terms
-  const res = await server.post('/auth',userData)
+  const res = await server.post('/auth/up',userData)
 console.log(res);
 }
 
