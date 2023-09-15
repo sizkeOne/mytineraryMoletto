@@ -15,7 +15,8 @@ import { useGoogleOneTapLogin } from '@react-oauth/google';
 import jwtDecode from 'jwt-decode';
 import { server } from './utils/axios';
 import { useEffect, useState } from 'react';
-
+import { useDispatch } from 'react-redux';
+import {authenticate, login} from './redux/actions/authActions.js'
 
 
 
@@ -47,8 +48,12 @@ children: [
 ])
 export default function App() {
 
-  const [count, setCount ]= useState(0)
+  const password = "Aab_123"
+  const dispacth = useDispatch();
 
+useEffect(()=>{
+dispacth(authenticate())
+},[])
 
 
   useGoogleOneTapLogin({
@@ -57,10 +62,13 @@ export default function App() {
     const infoUser = jwtDecode(credentialResponse.credential)
     const userData= {
       email: infoUser.email,
-      password: "aA_123"
+      password: password 
     } 
+  console.log(userData);
     const res = await server.post('/auth/in', userData)
+  
     console.log(res);
+    dispacth(login(res.data))
   },
   onError: () =>{
     console.log('Login Failed');

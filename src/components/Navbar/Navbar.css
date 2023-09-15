@@ -50,6 +50,12 @@ color: aliceblue;
 
 }
 
+.photoNav > img {
+
+    border-radius: 35px;
+    box-shadow: 1px 0px 0px 1px black;
+}
+
 @media (max-width: 575px){
 
     .urls {

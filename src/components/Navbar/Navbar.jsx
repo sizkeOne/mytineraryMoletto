@@ -1,19 +1,24 @@
 
 import Container from 'react-bootstrap/Container';
- 
+
 import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 
 import './Navbar.css'
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { useState } from 'react';
 
 
 function Navbar2() {
-
+  
+  const {user} = useSelector(store => store.authReducer)
+  const [show, setShow] = useState(false)
   return (
     <>
       {['sm'].map((expand) => (
   <div className="navbarStyle">
+
         <Navbar key={expand} expand={expand} className="navbarStyle">
           <Container fluid id='containerfluid'>
           
@@ -36,13 +41,17 @@ function Navbar2() {
               <Offcanvas.Body>
                 
                 <div className='urls'>
+
+                
                   <button className='buttonNav'><Link to="/"className='buttonNav' >Home</Link></button>
                   <button className='buttonNav'>  <Link to="/cities" className='buttonNav'>Cities</Link></button>
+                  
+
                   
                   <button className='buttonNav'>  <Link to="/signUp" className='buttonNav'>Sign Up</Link></button>
 
                   <button className='buttonNav'>  <Link to="/signIn" className='buttonNav'>Sign In</Link></button>
-                  
+
                 </div>
       
                 
@@ -50,8 +59,12 @@ function Navbar2() {
             </Navbar.Offcanvas>
            
             <div className='imageNav'>    
-                <img src="public/user.png" alt="" />
-                </div>
+{
+            user?.photo &&
+               <div className="photoNav"> <img src={user.photo} alt="profile" />
+               </div>
+               }
+                              </div>
           </Container>
         </Navbar>
         </div> 

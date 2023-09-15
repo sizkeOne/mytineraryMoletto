@@ -3,9 +3,14 @@ import React from 'react'
 import './googleLoginButton.css'
 import jwtDecode from 'jwt-decode'
 import axios from 'axios'
+ 
+
+
 
 const GoogleLoginButton = ({fn}) => {
 
+
+  const password = "Ab_123"
 const Login = useGoogleLogin({
 
   onSuccess: async tokenResponse => {
@@ -20,7 +25,7 @@ const Login = useGoogleLogin({
     fn( {
       email: data.email,
       name:  data.given_name,
-      password: "aA123",
+      password: data.given_name + password ,
       photo: data.picture,
       terms:true
     })

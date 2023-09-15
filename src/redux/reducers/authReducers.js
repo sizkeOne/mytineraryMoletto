@@ -1,6 +1,5 @@
 import { createReducer } from "@reduxjs/toolkit";
-import { build } from "vite";
-import { authenticate, signup } from "../actions/authActions";
+import { authenticate, login, signup } from "../actions/authActions";
 
 const initialState= {
     user: {},
@@ -10,18 +9,22 @@ const initialState= {
 
 const authReducer = createReducer(initialState,
     (builder) => builder
+
     .addCase(login, (state,action)=>{
-const newState = {...state, }
+
+console.log(action.payload);
+const newState = { ...state, ...action.payload}
+
 return newState
     })
-    .addCase(signup, (state,action)=>{
-        const newState = {...state, }
+    .addCase(signup, (state,action) => {
+        const newState = {...state,}
         return newState
     })
-    .addCase(authenticate.fulfilled, (state,action=>{
-        const newState = {...state, }
+    .addCase(authenticate.fulfilled, (state,action) =>{
+        const newState = {...state, ...action.payload}
         return newState
     }) 
     )
-)
+
     export default authReducer

@@ -5,21 +5,27 @@ import { GoogleLogin, GoogleOAuthProvider } from '@react-oauth/google'
 import jwtDecode from 'jwt-decode'
 import GoogleLoginButton from '../googleLoginButton/googleLoginButton'
 import { Link } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
+import { login } from '../../redux/actions/authActions'
  
 
 
 
 const  SignIn = () => {
-    
+    const dispacth = useDispatch()
     const inputEmail = useRef();
     
     const inputPass = useRef();
+
     
 const handleSumbitGoogle = async (data)=>{
-  const userData = {...data}
+  const userData = {email: data.email, password: data.password}
   delete userData.terms
   const res = await server.post('/auth/in',userData)
-console.log(res);
+  
+
+  console.log(res);
+  dispacth(login(res.data))
 }
 
 const handleSumbit = async (e)=>{
@@ -30,6 +36,7 @@ const handleSumbit = async (e)=>{
     }
 
     const res = await server.post('/auth/in',userData)
+    dispacth(login(res.data))
   console.log(res);
   }
   

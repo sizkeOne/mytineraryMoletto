@@ -5,9 +5,13 @@ import { GoogleLogin, GoogleOAuthProvider } from '@react-oauth/google'
 import jwtDecode from 'jwt-decode'
 import GoogleLoginButton from '../googleLoginButton/googleLoginButton'
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux'
+import { signup } from '../../redux/actions/authActions'
 
 
 const  SignUp = () => {
+
+const dispacth = useDispatch()
 
 const [data, setData] = useState({
   name:" ",
@@ -28,6 +32,7 @@ const handleSumbitData = async (event)=>{
   delete userData.terms
   const res = await server.post('/auth/up',userData)
 console.log(res);
+dispacth(signup(res.data))
 }
 
 const handleSumbitGoogle = async (data)=>{
@@ -35,6 +40,7 @@ const handleSumbitGoogle = async (data)=>{
   delete userData.terms
   const res = await server.post('/auth/up',userData)
 console.log(res);
+dispacth(signup(res.data))
 }
 
 
@@ -48,6 +54,7 @@ console.log(res);
             <GoogleOAuthProvider clientId='575147011863-a1b1tpept2es6bb4l0jvkm9js60jloga.apps.googleusercontent.com'>
 
 <GoogleLoginButton fn={handleSumbitGoogle}/>
+
             </GoogleOAuthProvider>
         </div>
         <br />
